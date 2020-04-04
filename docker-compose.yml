@@ -58,19 +58,19 @@ services:
         networks:
             net1:
                 ipv4_address: 192.188.2.11
-    enb:
-        build: srsLTE
-        depends_on:
-            - upf
-            - smf
-            - amf
-        #    - epc
-        privileged: true
-        volumes:
-            - /dev/bus/usb:/dev/bus/usb
-        networks:
-            net1:
-                ipv4_address: 192.188.2.253
+#    enb:
+#        build: srsLTE
+#        depends_on:
+#            - upf
+#            - smf
+#            - amf
+#        #    - epc
+#        privileged: true
+#        volumes:
+#            - /dev/bus/usb:/dev/bus/usb
+#        networks:
+#            net1:
+#                ipv4_address: 192.188.2.253
 #    epc:
 #        build:
 #            context: srsLTE
