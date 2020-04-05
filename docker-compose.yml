@@ -23,9 +23,7 @@ services:
               - "/dev/net/tun:/dev/net/tun"
         cap_add:
               - NET_ADMIN
-        networks: 
-            net1:
-                ipv4_address: 192.188.2.6
+        network_mode: "host"
     smf:
         build: smf
         depends_on:
