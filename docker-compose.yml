@@ -24,6 +24,8 @@ services:
         cap_add:
               - NET_ADMIN
         network_mode: "host"
+        environment:
+            WAIT_HOSTS: mongo:27017
     smf:
         build: smf
         depends_on:
